@@ -20,12 +20,16 @@ import chromecast from "./chrome-cast.svg";
 import sliders04 from "./sliders-04.svg";
 import loading from "./loading.png";
 import background from "./background.jpg";
-import collinsLogo from "./collinsLogo.png"
-import darkBackground from "./darkBackground.png"
+import collinsLogo from "./collinsLogo.png";
+import darkBackground from "./darkBackground.png";
+import tigerwebLogo from "./tigerwebLogo.png";
+import tigerweb_logo from "./tigerwebLogo-removebg-preview.png";
+import tallyTap from "./tallyTapLogo.png";
 
 import curve from "./hero/curve.png";
 import robot from "./hero/robot.jpg";
 import heroBackground from "./hero/hero-background.jpg";
+import coding from "./coding.PNG"
 
 import curve1 from "./collaboration/curve-1.svg";
 import curve2 from "./collaboration/curve-2.svg";
@@ -37,6 +41,15 @@ import photoshop from "./collaboration/photoshop.png";
 import protopie from "./collaboration/protopie.png";
 import raindrop from "./collaboration/raindrop.png";
 import slack from "./collaboration/slack.png";
+import coding1 from "./collaboration/coding.png";
+import csharp from "./collaboration/csharp.png";
+import flutter from "./collaboration/flutter.png";
+import mongodb from "./collaboration/mongodb.png";
+import nodejs from "./collaboration/nodejs.png";
+import python from "./collaboration/python.png";
+import reactjs from "./collaboration/reactjs.png";
+import firebase from "./collaboration/firebase.png";
+import aws from "./collaboration/aws.png";
 
 import service1 from "./services/service-1.png";
 import service2 from "./services/service-2.png";
@@ -53,6 +66,12 @@ import roadmap2 from "./roadmap/image-2.png";
 import roadmap3 from "./roadmap/image-3.png";
 import roadmap4 from "./roadmap/image-4.png";
 import undone from "./roadmap/undone.svg";
+import landingPage from "./landingPage.PNG";
+import TallyTaphome from "./TallyTaphome.PNG" ;
+import touristaHome from "./touristaHome.jpg";
+import tigerwebHome from "./tigerwebHome.PNG";
+import fdms from "./fdmsGateway.PNG";
+import hirelane from "./hirelane.png";
 
 import notification1 from "./notification/image-1.png";
 import notification2 from "./notification/image-2.png";
@@ -79,6 +98,25 @@ import twitter from "./socials/twitter.svg";
 
 export {
   brainwave,
+  tallyTap,
+  coding1,
+  csharp,
+  flutter,
+  mongodb,
+  firebase,
+  aws,
+  nodejs,
+  python,
+  reactjs,
+  coding,
+  tigerwebLogo,
+  hirelane,
+  tigerweb_logo,
+  landingPage,
+  tigerwebHome,
+  TallyTaphome,
+  touristaHome,
+  fdms,
   collinsLogo,
   darkBackground,
   check,

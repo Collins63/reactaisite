@@ -1,6 +1,6 @@
 import React, { useRef } from 'react'
 import Section from "./Section"
-import { curve, heroBackground, robot } from '../assets'
+import { curve, heroBackground, robot, tigerweb_logo } from '../assets'
 import { Button } from './Button'
 import {darkBackground} from '../assets'
 import { BackgroundCircles , BottomLine , Gradient } from './design/Hero'
@@ -9,6 +9,7 @@ import { ScrollParallax } from 'react-just-parallax'
 import Generating from './Generating'
 import Notification from './Notification'
 import CompanyLogos from './CompanyLogos'
+import { coding } from '../assets'
 
 const Hero = () => {
     const parallaxRef = useRef(null)
@@ -22,35 +23,19 @@ const Hero = () => {
     >
         <div className='container relative ' ref={parallaxRef}>
             <div className="relative z-1 max-w-[62rem] mt-10 mx-auto text-center mb-[4rem] md:mb-20 lg:mb:[6rem]">
-                <h1 className='h1 mb-6 text-4xl'>
-                    "Code will turn your dreams into reality with me"
+                <h1 className='h1 mb-6 text-4xl text-gray-400'>
+                    "Unleash the power of programming with me. Boost your productivity with modern tools and programming technologies"
                 </h1>
-                <span className="inline-block mb-6 text-4xl mt-5 relative">
-                        Collins Chimbganda{" "}
-                        <img 
-                            src={curve}
-                            alt=""
-                            className="absolute top-full left-0 w-full xl:-mt-0"
-                            width={624}
-                            height={28}
-                        />
-                </span>
-                <p className='body-1 max-w-3xl mx-auto mb-6 text-gray-400 lg:mb-8'>
-                    Unleash the power of programming with me. Boost your productivity with modern tools and programming technologies
-                </p>
-                <Button href="/pricing" white>
-                    Get Started
-                </Button>
             </div>
             <div className="relative max-w-[23rem] mx-auto md:max-w-5xl xl:mb-24">
                 <div className="relative z-1 p-0.5 rounded-2xl bg-conic-gradient">
-                    <div className='relative bg-black rounded-[1rem]'>
+                    <div className='relative bg-gray-800  rounded-[1rem]'>
                         <div className="h-[1.4rem] bg-gray-800 rounded-t-[0.9rem]" />
                         <div className="aspect-[33/40] rounded-b-[0.9rem] overflow-hidden md:aspect-[688/490] lg:aspect-[1024/590]" >
                             <img 
-                                className='w-full scale-[1.7] translate-y-[8%]
+                                className='w-full h-full scale-[1.7] translate-y-[8%]
                                 md:scale-[1] md:-translate-y-[10%] lg:translate-y-23%'
-                                src={darkBackground} 
+                                src={coding} 
                                 alt="AI"
                                 width={1024}
                                 height={590}
@@ -75,7 +60,7 @@ const Hero = () => {
                     </div>
                     <Gradient />
                 </div>
-                <div className='absolute -top-[54%] left-1/2 w-[234%] -translate-x-1/2 md:-top-[46%] md:w-[138%] lg:-top-[104% ]'>
+                {/* <div className='absolute -top-[54%] left-1/2 w-[234%] -translate-x-1/2 md:-top-[46%] md:w-[138%] lg:-top-[104% ]'>
                     <img 
                         src={heroBackground} 
                         alt="hero"
@@ -83,14 +68,13 @@ const Hero = () => {
                         width={1440}
                         height={1800}
                     />
-                </div>
+                </div> */}
                 <BackgroundCircles />
             </div>
-            <CompanyLogos className="hidden relative z-10 mt-20 lg:block" />
         </div>
         <BottomLine />
     </Section>
   )
-}
+}   
 
 export default Hero
