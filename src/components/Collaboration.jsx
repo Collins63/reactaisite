@@ -3,7 +3,7 @@ import Section from './Section'
 import { collabApps, collabContent, collabText } from '../constants'
 import { brainwaveSymbol, check, coding1 } from '../assets'
 import { Button } from './Button'
-import { LeftCurve, RightCurve } from '../../../../Downloads/brainwave-main/brainwave-main/src/components/design/Collaboration'
+import { LeftCurve, RightCurve } from './design/Collaboration'
 import { BottomLine } from './design/Hero'
 
 const Collaboration = () => {
