@@ -11,6 +11,7 @@ import {
   discord,
   discordBlack,
   facebook,
+  fdmsgatewaylogo,
   figma,
   file02,
   firebase,
@@ -99,7 +100,7 @@ export const roadmap = [
     id: "0",
     title: "Hirelane",
     text: "A search seekers portal that brings the employer close to their potential employees",
-    date: "May 2023",
+    date: "May 2026",
     status: "progress",
     imageUrl: hirelane,
     colorful: true,
@@ -114,7 +115,7 @@ export const roadmap = [
     id: "1",
     title: "TallyTap",
     text: "A Point of Sale System made for mobile users. It comes along with all the benefits of having a point of sale plus optional fiscalization",
-    date: "May 2023",
+    date: "Jan 2025",
     status: "done",
     imageUrl: tallyTap,
     languages:[
@@ -129,6 +130,15 @@ export const roadmap = [
     date: "January 2024",
     status: "done",
     imageUrl: roadmap3,
+    languages:[]
+  },
+  {
+    id: "3",
+    title: "FDMS Gateway",
+    text: "Seemless fiscalization brought to you on the cloud. Get your business fiscalized and compliant with the local tax authorities",
+    date: "July 2026",
+    status: "done",
+    imageUrl: fdmsgatewaylogo,
     languages:[]
   },
   // {

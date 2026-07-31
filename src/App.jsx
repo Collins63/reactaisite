@@ -28,7 +28,7 @@ const App = () => {
       <Experience />
       <Pricing />
       <Roadmap />
-      <AnimatedTestimonialsDemo />
+      {/* <AnimatedTestimonialsDemo /> */}
       <Footer />  
       </div>
       <ButtonGradient/>

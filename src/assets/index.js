@@ -95,6 +95,7 @@ import facebook from "./socials/facebook.svg";
 import instagram from "./socials/instagram.svg";
 import telegram from "./socials/telegram.svg";
 import twitter from "./socials/twitter.svg";
+import fdmsgatewaylogo from "./fdmsgatewaylogo.png"
 
 export {
   brainwave,
@@ -102,6 +103,7 @@ export {
   coding1,
   csharp,
   flutter,
+  fdmsgatewaylogo,
   mongodb,
   firebase,
   aws,

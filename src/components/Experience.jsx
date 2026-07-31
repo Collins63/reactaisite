@@ -4,50 +4,56 @@ import Section from "./Section";
 import Heading from "./Heading";
 import TagLine from "./Tagline";
 import { grid } from "../assets";
-import { fdms, landingPage, TallyTaphome, tigerwebHome, touristaHome } from "../assets";
+import { fdms, landingPage, TallyTaphome, tigerwebHome, touristaHome , background } from "../assets";
 
 const experience = [
   {
     id: "0",
-    year: "2025",
-    title: "TigerWeb",
-    text: "Add a short description of what this project was and your role in it.",
-    imageUrl: tigerwebHome,
+    year: "2023",
+    company:"Tigerweb",
+    title: "Internship",
+    text: "Started my internship as a junior, primarily focusing on IT support, troubleshooting and system installations.",
+    imageUrl: background,
   },
   {
     id: "1",
     year: "2025",
-    title: "Landing Page",
-    text: "Add a short description of what this project was and your role in it.",
-    imageUrl: landingPage,
+    company: "Tigerweb",
+    title: "Junior Software Developer",
+    text: "Developed responsive websites and web applications for clients across diverse sectors, ensuring optimized performance and modern UI/UX.",
+    imageUrl: background,
   },
   {
     id: "2",
     year: "2025",
-    title: "TallyTap",
-    text: "A point of sale system made for mobile users, complete with all the benefits of a point of sale plus optional fiscalization.",
-    imageUrl: TallyTaphome,
+    company: "Tourista AR",
+    title: "Full Stack Developer",
+    text: "Led the design and development of the company’s web and mobile platforms, overseeing all stages of implementation from concept to deployment.",
+    imageUrl: background,
   },
   {
     id: "3",
     year: "2024",
-    title: "FDMS Gateway",
-    text: "Add a short description of what this project was and your role in it.",
-    imageUrl: fdms,
+    company: "Tigerweb",
+    title: "Junior Software Developer",
+    text: "Built and deployed inventory management and POS systems, streamlining business operations and sales tracking for small to medium enterprises.",
+    imageUrl:  background,
   },
   {
     id: "4",
-    year: "2024",
-    title: "Tourista",
-    text: "Add a short description of what this project was and your role in it.",
-    imageUrl: touristaHome,
+    year: "2026",
+    company: "Tourista AR ",
+    title: "Full Stack Developer",
+    text: "Collaborated with design and content teams to create an engaging digital presence that aligns with the company’s AI and AR tourism vision",
+    imageUrl:  background,
   },
   {
     id: "5",
-    year: "Mid 2023",
-    title: "Internship",
-    text: "Started my internship as a junior, primarily focusing on IT support, troubleshooting and system installations.",
-    imageUrl: null,
+    year: "2026",
+    company: "Omnicontact International",
+    title: "Software Engineer",
+    text: "Collaborating with cross-functional teams in Agile (Scrum) environments, participating in sprint planning, daily stand-ups, backlog refinement, code reviews, and retrospectives. ",
+    imageUrl:  background,
   },
 ];
 
@@ -131,8 +137,8 @@ export function Experience() {
                           <TagLine className="text-white mb-6">{item.year}</TagLine>
 
                           <h4 className="h5 mb-2 text-white">{item.title}</h4>
+                          <h2 className="text-purple-600">{item.company}</h2>
                           <p className="body-2 text-gray-400 line-clamp-3">{item.text}</p>
-
                           <span className="font-code text-xs text-color-1 uppercase tracking-wider mt-auto pt-6">
                             View journey →
                           </span>
