@@ -1,0 +1,7 @@
+{"at":"2026-10-08T09:37:05.873Z","agent":"copilot","kind":"agent","summary":"Replaced chatbot-focused pricing copy with software development, AI development, and DevOps offerings across tiers.","sha":"a86793b","branch":"main","tests":"No diagnostics in src/constants/index.js"}
+{"at":"2026-10-08T09:41:18.576Z","agent":"user","kind":"handoff","summary":"Handoff copilot -> claude-code (401 tokens)","sha":"a86793b","branch":"main","from":"copilot","to":"claude-code"}
+{"at":"2026-10-08T09:42:13.895Z","agent":"user","kind":"handoff","summary":"Handoff copilot -> clipboard (422 tokens)","sha":"a86793b","branch":"main","from":"copilot","to":"clipboard"}
+{"at":"2026-10-08T15:03:03.994Z","agent":"auto","kind":"auto","summary":"Edit burst - 2 files changed, 64 insertions(+), 22 deletions(-) - open: src/constants/index.js","sha":"a86793b","branch":"main"}
+{"at":"2026-10-09T11:13:39.457Z","agent":"user","kind":"handoff","summary":"Handoff copilot -> claude-code (429 tokens)","sha":"a86793b","branch":"main","from":"copilot","to":"claude-code"}
+{"at":"2026-10-09T11:19:31.896Z","agent":"user","kind":"handoff","summary":"Handoff copilot -> claude-code (424 tokens)","sha":"a86793b","branch":"main","from":"copilot","to":"claude-code"}
+{"at":"2026-10-09T11:23:19.413Z","agent":"user","kind":"agent","summary":"we expanded roadmap text","sha":"a86793b","branch":"main"}

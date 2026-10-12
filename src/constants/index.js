@@ -99,7 +99,7 @@ export const roadmap = [
   {
     id: "0",
     title: "Hirelane",
-    text: "A search seekers portal that brings the employer close to their potential employees",
+    text: "A job search portal that brings employers closer to their potential employees. Job seekers can build profiles and browse openings, while employers can post vacancies and connect directly with candidates. Built with a Flutter mobile front end on a Node.js backend, with Firebase and MongoDB handling authentication and data.",
     date: "May 2026",
     status: "progress",
     imageUrl: hirelane,
@@ -114,7 +114,7 @@ export const roadmap = [
   {
     id: "1",
     title: "TallyTap",
-    text: "A Point of Sale System made for mobile users. It comes along with all the benefits of having a point of sale plus optional fiscalization",
+    text: "A Point of Sale system made for mobile users. It brings the everyday benefits of a POS, such as making sales, tracking stock and reviewing daily takings, straight to a phone or tablet, with optional fiscalization for businesses that need to stay compliant. Built with Flutter and Python.",
     date: "Jan 2025",
     status: "done",
     imageUrl: tallyTap,
@@ -125,21 +125,16 @@ export const roadmap = [
   },
   {
     id: "2",
-    title: "Chatbot customization",
-    text: "Get a chatbot that works alongside your daily work platforms and let them do the talking for you",
-    date: "January 2024",
-    status: "done",
-    imageUrl: roadmap3,
-    languages:[]
-  },
-  {
-    id: "3",
     title: "FDMS Gateway",
-    text: "Seemless fiscalization brought to you on the cloud. Get your business fiscalized and compliant with the local tax authorities",
+    text: "Seamless fiscalization on the cloud. The gateway sits between your business software and the tax authority, so you can get fiscalized and stay compliant with local tax requirements without managing the integration yourself. Includes a React dashboard backed by a Node.js API and MongoDB.",
     date: "July 2026",
     status: "done",
     imageUrl: fdmsgatewaylogo,
-    languages:[]
+    languages:[
+      reactjs,
+      nodejs,
+      mongodb
+    ]
   },
   // {
   //   id: "3",
@@ -235,34 +230,40 @@ export const pricing = [
   {
     id: "0",
     title: "Basic",
-    description: "AI chatbot, personalized recommendations",
+    description: "Core software development for web and mobile products",
     price: null,
     features: [
-      "An AI chatbot that can understand your queries",
-      "Personalized recommendations based on your preferences",
-      "Ability to explore the app and its features without any cost",
+      "Responsive websites and web applications tailored to your needs",
+      "Frontend and backend development for essential product features",
+      "API integration and support for launching your application",
+      "Clean, maintainable code with clear documentation",
+      "Basic testing and bug fixing before launch",
     ],
   },
   {
     id: "1",
     title: "Premium",
-    description: "Advanced AI chatbot, priority support, analytics dashboard",
+    description: "Custom software development with AI-powered capabilities",
     price:null,
     features: [
-      "An advanced AI chatbot that can understand complex queries",
-      "An analytics dashboard to track your conversations",
-      "Priority support to solve issues quickly",
+      "Custom web and mobile application development",
+      "AI solutions, including LLM integrations and intelligent workflows",
+      "Priority support, testing, and ongoing improvements",
+      "AI chatbots and automation connected to your existing tools",
+      "Secure authentication, databases, and cloud hosting setup",
     ],
   },
   {
     id: "2",
     title: "Enterprise",
-    description: "Custom AI chatbot, advanced analytics, dedicated account",
+    description: "End-to-end software, AI, and DevOps for growing teams",
     price: null,
     features: [
-      "An AI chatbot that can understand your queries",
-      "Personalized recommendations based on your preferences",
-      "Ability to explore the app and its features without any cost",
+      "Scalable custom software and AI solution architecture",
+      "DevOps setup for cloud deployment, CI/CD, and infrastructure",
+      "Dedicated technical support, monitoring, and optimization",
+      "Custom AI model integration, fine-tuning, and data pipelines",
+      "Security reviews, backups, and high-availability planning",
     ],
   },
 ];

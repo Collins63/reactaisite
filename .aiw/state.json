@@ -1,0 +1,21 @@
+{
+  "schema": "aiw/1",
+  "task": {
+    "id": "t-muzcamc0",
+    "goal": "change  pricing features ",
+    "status": "done",
+    "steps": [
+      {
+        "id": "s1",
+        "title": "start by changing the description they all point to ai chatbot",
+        "status": "done"
+      }
+    ],
+    "blockers": [],
+    "files": [],
+    "next_action": "Task complete",
+    "updated_by": "copilot",
+    "updated_at": "2026-10-08T09:36:58.470Z"
+  },
+  "backlog": []
+}

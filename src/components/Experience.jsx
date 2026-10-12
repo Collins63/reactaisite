@@ -5,6 +5,8 @@ import Heading from "./Heading";
 import TagLine from "./Tagline";
 import { grid } from "../assets";
 import { fdms, landingPage, TallyTaphome, tigerwebHome, touristaHome , background } from "../assets";
+import { div } from "framer-motion/client";
+import { IoRadioButtonOnOutline } from "react-icons/io5";
 
 const experience = [
   {
@@ -13,6 +15,11 @@ const experience = [
     company:"Tigerweb",
     title: "Internship",
     text: "Started my internship as a junior, primarily focusing on IT support, troubleshooting and system installations.",
+    tasks:[
+      "Assisted with IT support, system setup, and software installations at client sites when required.",
+      "Gained hands-on experience in end-to-end software delivery, from requirements gathering to deployment and client training.",
+
+    ],
     imageUrl: background,
   },
   {
@@ -21,6 +28,11 @@ const experience = [
     company: "Tigerweb",
     title: "Junior Software Developer",
     text: "Developed responsive websites and web applications for clients across diverse sectors, ensuring optimized performance and modern UI/UX.",
+    tasks:[
+      "Developed responsive websites and web applications for clients across diverse sectors, ensuring optimized performance and modern UI/UX.",
+      "Built and deployed inventory management and POS systems, streamlining business operations and sales tracking for small to medium enterprises",
+      "Contributed to internal company projects, including the payroll management system and school management system, handling both frontend and backend development.",
+    ],
     imageUrl: background,
   },
   {
@@ -29,6 +41,12 @@ const experience = [
     company: "Tourista AR",
     title: "Full Stack Developer",
     text: "Led the design and development of the company’s web and mobile platforms, overseeing all stages of implementation from concept to deployment.",
+    tasks:[
+      "Collaborated with design and content teams to create an engaging digital presence that aligns with the company’s AI and AR tourism vision.",
+      "AI models training and management ensuring that they are fine tuned to the company’s domain",
+      "Managed end-to-end system architecture, code reviews, and deployment processes to ensure smooth operation and scalability",
+      "Provided technical guidance and handled all development-related issues, ensuring timely delivery of milestones and maintaining high code quality."
+    ],
     imageUrl: background,
   },
   {
@@ -37,6 +55,10 @@ const experience = [
     company: "Tigerweb",
     title: "Junior Software Developer",
     text: "Built and deployed inventory management and POS systems, streamlining business operations and sales tracking for small to medium enterprises.",
+    tasks:[
+     "Implemented e-invoicing solutions with fiscal QR codes for ZIMRA compliance, integrating secure fiscalization APIs.",
+      "Utilized technologies such as Python/Django, JavaScript (Node.js, React), and Flutter/Dart for fullstack development"
+    ],
     imageUrl:  background,
   },
   {
@@ -45,6 +67,12 @@ const experience = [
     company: "Tourista AR ",
     title: "Full Stack Developer",
     text: "Collaborated with design and content teams to create an engaging digital presence that aligns with the company’s AI and AR tourism vision",
+    tasks:[
+      "Led the design and development of the company’s web and mobile platforms, overseeing all stages of implementation from concept to deployment.",
+      "Developed and maintained the company website using React.js and Node.js, ensuring high performance, responsiveness, and modern UI/UX standards.",
+      "Built the TouristaAR mobile application with Flutter and Firebase, integrating real-time data, authentication, and cloud storage.",
+      "Designed and implemented RESTful APIs using Node.js and MongoDB, enabling seamless communication between web and mobile clients."
+    ],
     imageUrl:  background,
   },
   {
@@ -53,6 +81,12 @@ const experience = [
     company: "Omnicontact International",
     title: "Software Engineer",
     text: "Collaborating with cross-functional teams in Agile (Scrum) environments, participating in sprint planning, daily stand-ups, backlog refinement, code reviews, and retrospectives. ",
+    tasks:[
+      "Integrating Large Language Models (LLMs), vector databases, and embedding models into enterprise applications to deliver AI-driven capabilities.",
+      "Performing backend testing, including unit, integration, and API testing, to ensure system stability, functionality, and high-quality software releases.",
+      "Design and implement AI-powered solutions, including Retrieval-Augmented Generation (RAG) systems, to enhance knowledge retrieval, automation, and intelligent decision-making.",
+      "Develop and integrate backend services and RESTful APIs to support web and mobile applications, ensuring performance, security, and reliability."
+    ],
     imageUrl:  background,
   },
 ];
@@ -201,6 +235,13 @@ export function Experience() {
                   <TagLine className="text-white mb-4">{activeItem.year}</TagLine>
                   <h3 className="h3 mb-4 text-white">{activeItem.title}</h3>
                   <p className="body-2 text-gray-400">{activeItem.text}</p>
+                  <h2 className="text-lg font-medium text-purple-900 my-5">Key Responsibilities</h2>
+                  {activeItem.tasks.map(task =>(
+                    <div className="flex flex-row justify-start gap-3 items-center mt-2">
+                      <IoRadioButtonOnOutline className="text-purple-800" />
+                      <p className="text-gray-400 text-sm">{task}</p>
+                    </div>
+                  ))}
                 </div>
               </motion.div>
             </div>

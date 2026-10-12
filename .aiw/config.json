@@ -1,0 +1,11 @@
+{
+  "budget_tokens": 6000,
+  "exclude": [
+    ".env",
+    ".env.*",
+    "*.pem",
+    "*.key",
+    "id_rsa*"
+  ],
+  "transcript_turns": 0
+}
