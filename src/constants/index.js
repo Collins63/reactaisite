@@ -25,6 +25,8 @@ import {
   notification2,
   notification3,
   notification4,
+  devRelay,
+  devRelayWhite,
   notion,
   photoshop,
   plusSquare,
@@ -45,6 +47,8 @@ import {
   telegram,
   twitter,
   yourlogo,
+  typescriptlogo,
+  postgres,
 } from "../assets";
 
 export const navigation = [
@@ -136,14 +140,18 @@ export const roadmap = [
       mongodb
     ]
   },
-  // {
-  //   id: "3",
-  //   title: "Integration with APIs",
-  //   text: "Allow the chatbot to access external data sources, such as weather APIs or news APIs, to provide more relevant recommendations.",
-  //   date: "May 2023",
-  //   status: "progress",
-  //   imageUrl: roadmap4,
-  // },
+  {
+    id: "3",  
+    title: "DevRelay Integration",
+    text: "Integrate DevRelay into our workflow to streamline development processes and improve collaboration.",
+    date: "December 2026",
+    status: "progress",
+    imageUrl: devRelayWhite,
+    languages:[
+      typescriptlogo,
+      postgres
+    ]
+  },
 ];
 
 export const collabText =
@@ -153,17 +161,26 @@ export const collabContent = [
   {
     id: "0",
     title: "Front-End Development",
-    text: "Im capable of developing and deploying backend code for various systems and services"
+    text: "I build fast, responsive interfaces with modern UI/UX, from landing pages to full web applications.",
+    tags: ["React", "Tailwind CSS", "JavaScript", "Flutter"],
   },
   {
     id: "1",
     title: "Backend Development",
-    text: "Im capable of developing and deploying backend code for various systems and services"
+    text: "I develop and deploy backend code and services that power web and mobile products.",
+    tags: ["Node.js", "Django", "MongoDB", "Firebase"],
   },
   {
     id: "2",
+    title: "AI Development",
+    text: "I develop and deploy AI solutions, including LLM integrations and Retrieval-Augmented Generation systems.",
+    tags: ["LLMs", "RAG", "Embeddings", "Vector DBs"],
+  },
+  {
+    id: "3",
     title: "API Integration",
-    text: "Im capable of developing and deploying backend code for various systems and services"
+    text: "I design RESTful APIs and integrate third-party services securely and reliably.",
+    tags: ["REST", "Fiscal APIs", "Auth", "Testing"],
   },
 ];
 
@@ -229,41 +246,41 @@ export const collabApps = [
 export const pricing = [
   {
     id: "0",
-    title: "Basic",
+    title: "Full Stack Development",
     description: "Core software development for web and mobile products",
     price: null,
     features: [
       "Responsive websites and web applications tailored to your needs",
       "Frontend and backend development for essential product features",
-      "API integration and support for launching your application",
-      "Clean, maintainable code with clear documentation",
-      "Basic testing and bug fixing before launch",
+      "RESTful API design and third-party integrations",
+      "Mobile apps built with Flutter and Firebase",
+      "Clean, maintainable code with testing and clear documentation",
     ],
   },
   {
     id: "1",
-    title: "Premium",
-    description: "Custom software development with AI-powered capabilities",
-    price:null,
+    title: "AI Development",
+    description: "AI chatbots and intelligent features built into your products",
+    price: null,
     features: [
-      "Custom web and mobile application development",
-      "AI solutions, including LLM integrations and intelligent workflows",
-      "Priority support, testing, and ongoing improvements",
-      "AI chatbots and automation connected to your existing tools",
-      "Secure authentication, databases, and cloud hosting setup",
+      "AI chatbots connected to your data and existing tools",
+      "LLM integrations and intelligent workflows",
+      "Retrieval-Augmented Generation (RAG) for accurate, domain-specific answers",
+      "Vector databases and embedding pipelines for smart search",
+      "Model fine-tuning, evaluation, and ongoing improvements",
     ],
   },
   {
     id: "2",
-    title: "Enterprise",
-    description: "End-to-end software, AI, and DevOps for growing teams",
+    title: "DevOps & Cloud",
+    description: "Reliable deployment and infrastructure for growing teams",
     price: null,
     features: [
-      "Scalable custom software and AI solution architecture",
-      "DevOps setup for cloud deployment, CI/CD, and infrastructure",
-      "Dedicated technical support, monitoring, and optimization",
-      "Custom AI model integration, fine-tuning, and data pipelines",
-      "Security reviews, backups, and high-availability planning",
+      "Cloud deployment and hosting setup",
+      "CI/CD pipelines for automated testing and releases",
+      "Infrastructure setup, monitoring, and optimization",
+      "Security reviews, secure authentication, and backups",
+      "High-availability and scalability planning",
     ],
   },
 ];

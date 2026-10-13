@@ -2,7 +2,6 @@ import React from 'react'
 import Section from './Section'
 import Heading from './Heading'
 import { roadmap } from '../constants'
-import { div } from 'framer-motion/client'
 import { check, check2, grid, loading1 } from '../assets'
 import TagLine from './Tagline'
 import { Gradient } from './design/Hero'
@@ -65,11 +64,10 @@ const Roadmap = () => {
                   <h4 className="h4 mb-4 text-white">{item.title}</h4>
                   <p className="body-2 text-gray-400">{item.text}</p>
                   <div className='flex mt-5 flex-row'>
-                    {item.languages.map((language,index) => (
-                      <div className='bg-transparent rounded-full'>
+                    {(item.languages ?? []).map((language,index) => (
+                      <div className='bg-transparent p-1 rounded-full' key={index}>
                         <img src={language}
                           alt=""
-                          key={index}
                           width={30}
                           height={30}
                         />

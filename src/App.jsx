@@ -1,8 +1,11 @@
+import { Routes, Route } from 'react-router-dom'
+import ComponentsPage from './pages/ComponentsPage'
 import ButtonGradient from './assets/svg/ButtonGradient'
 import AuroraHero from './components/AuroraHero'
 import BackgroundBeamsDemo from './components/BackgroundBeams'
 import Benefits from './components/Benefits'
 import { Button } from './components/Button'
+import { Certificates } from './components/Certificates'
 import Collaboration from './components/Collaboration'
 import { FloatingDockBottom } from './components/design/FloatingDock'
 import { ExpandableCard } from './components/ExpandableCard'
@@ -16,7 +19,7 @@ import Services from './components/Services'
 import { AnimatedTestimonialsDemo } from './components/Testimonials'
 
 
-const App = () => {
+const Home = () => {
   return (
     <>
       <div className='overflow-hidden'>
@@ -26,6 +29,7 @@ const App = () => {
       <BackgroundBeamsDemo />
       <Collaboration />
       <Experience />
+      <Certificates />
       <Pricing />
       <Roadmap />
       {/* <AnimatedTestimonialsDemo /> */}
@@ -35,6 +39,13 @@ const App = () => {
    </>
   )
 }
+
+const App = () => (
+  <Routes>
+    <Route path='/' element={<Home />} />
+    <Route path='/components' element={<ComponentsPage />} />
+  </Routes>
+)
 
 export default App
  

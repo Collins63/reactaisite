@@ -1,10 +1,19 @@
 import React from 'react'
 import Section from './Section'
 import { collabApps, collabContent, collabText } from '../constants'
-import { brainwaveSymbol, check, coding1 } from '../assets'
+import { brainwaveSymbol, check, coding1, grid } from '../assets'
+import { IconBrandReact, IconServer, IconBrain, IconApi, IconCode } from '@tabler/icons-react'
+import PlusSvg from '../assets/svg/PlusSvg'
 import { Button } from './Button'
 import { LeftCurve, RightCurve } from './design/Collaboration'
 import { BottomLine } from './design/Hero'
+
+const collabIcons = {
+    '0': IconBrandReact,
+    '1': IconServer,
+    '2': IconBrain,
+    '3': IconApi,
+}
 
 const Collaboration = () => {
   return (
@@ -12,23 +21,9 @@ const Collaboration = () => {
         <div className="container lg:flex lg:ml-12">
             <div className="max-w-[25rem]">
                 <h2 className='h2 mb-4 text-white md:mb-8'>
-                    "Unleash the power of programming with me. Boost your productivity with modern tools and programming technologies"
+                    "Unleash the power of programming with me , boost your productivity."
                 </h2>
-                <ul className='max-w-[22rem] mb-10 md:mb-14'>
-                    {
-                        collabContent.map((item) => (
-                            <li className='mb-3 py-3' key={item.id}>
-                                <div className='flex items-center'>
-                                    <img src={check} alt="check" width={24} height={24} />
-                                    <h6 className='body-2 text-white ml-5'>{item.title}</h6>
-                                </div>
-                                {item.text && (
-                                    <p className='body-2 mt-3 text-gray-400'>{item.text}</p>
-                                )}
-                            </li>
-                        ))
-                    }
-                </ul>
+                
                 <Button> Try It Now</Button>
             </div>
             <div className='lg:ml-auto xl:w-[38rem] mt-4'>
@@ -69,7 +64,45 @@ const Collaboration = () => {
                 </div>
             </div>
         </div>
-        
+        <ul className='container mt-10 md:mt-40 mb-10 md:mb-14 grid gap-6 sm:grid-cols-2 xl:grid-cols-4'>
+            {collabContent.map((item) => {
+                const Icon = collabIcons[item.id] || IconCode
+                return (
+                    <li key={item.id} className='relative p-0.25 border border-gray-800'>
+                        <PlusSvg className='absolute -top-[5.5px] -left-[5.5px] z-2 pointer-events-none' />
+                        <PlusSvg className='absolute -top-[5.5px] -right-[5.5px] z-2 pointer-events-none' />
+                        <PlusSvg className='absolute -bottom-[5.5px] -left-[5.5px] z-2 pointer-events-none' />
+                        <PlusSvg className='absolute -bottom-[5.5px] -right-[5.5px] z-2 pointer-events-none' />
+                        <div className='relative flex h-full flex-col overflow-hidden  bg-neutral-900'>
+                            <div className='relative m-4 mb-0 flex h-40 items-center justify-center overflow-hidden border border-stroke-1 bg-[radial-gradient(circle_at_30%_20%,rgba(172,106,255,0.35),transparent_60%),radial-gradient(circle_at_80%_80%,rgba(255,119,230,0.25),transparent_60%)]'>
+                                <img className='absolute inset-0 w-full opacity-20 pointer-events-none' src={grid} width={550} height={550} alt='' />
+                                <Icon className='relative h-14 w-14 text-white' stroke={1.2} />
+                            </div>
+
+                            <div className='flex flex-1 flex-col p-6'>
+                                <h4 className='h5 mb-3 text-white'>{item.title}</h4>
+                                <p className='body-2 mb-5 text-gray-400'>{item.text}</p>
+
+                                <div className='mb-6 flex flex-wrap gap-2'>
+                                    {item.tags?.map((tag) => (
+                                        <span key={tag} className='rounded-xl border border-stroke-1 bg-white/5 px-3 py-1 text-xs text-gray-300'>
+                                            {tag}
+                                        </span>
+                                    ))}
+                                </div>
+
+                                <div className='mt-auto border-t border-stroke-1 pt-5'>
+                                    <a href='#roadmap' className='inline-flex items-center gap-2 rounded-xl border border-stroke-1 bg-white/5 px-4 py-2 text-sm font-medium text-white'>
+                                        <img src={check} alt='' width={18} height={18} />
+                                        View projects
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                )
+            })}
+        </ul>
     </Section>
   )
 }

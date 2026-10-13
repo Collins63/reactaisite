@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import { AnimatePresence, motion, useScroll, useTransform } from "framer-motion";
+import { AnimatePresence, motion, useMotionValueEvent, useScroll, useTransform } from "framer-motion";
 import Section from "./Section";
 import Heading from "./Heading";
 import TagLine from "./Tagline";
@@ -7,6 +7,7 @@ import { grid } from "../assets";
 import { fdms, landingPage, TallyTaphome, tigerwebHome, touristaHome , background } from "../assets";
 import { div } from "framer-motion/client";
 import { IoRadioButtonOnOutline } from "react-icons/io5";
+import PlusSvg from "../assets/svg/PlusSvg";
 
 const experience = [
   {
@@ -99,6 +100,51 @@ const groupByYear = (items) => {
   }, {});
 };
 
+// Timeline dot, year and divider that turn purple once the scroll line reaches the dot's centre.
+const YearMarker = ({ year, lineHeight }) => {
+  const ref = useRef(null);
+  const [top, setTop] = useState(Infinity);
+  const [active, setActive] = useState(false);
+
+  useEffect(() => {
+    const measure = () => {
+      const block = ref.current?.parentElement;
+      if (block) setTop(block.offsetTop + ref.current.offsetHeight / 2);
+    };
+    measure();
+    window.addEventListener("resize", measure);
+    return () => window.removeEventListener("resize", measure);
+  }, []);
+
+  useEffect(() => {
+    setActive(lineHeight.get() >= top);
+  }, [top, lineHeight]);
+
+  useMotionValueEvent(lineHeight, "change", (v) => setActive(v >= top));
+
+  return (
+    <>
+    <div
+      ref={ref}
+      className={`absolute left-3 top-0 h-10 w-10 rounded-full bg-neutral-900 flex items-center justify-center border transition-all duration-500 ${
+        active ? "border-color-1 shadow-[0_0_18px] shadow-color-1/50" : "border-transparent"
+      }`}
+    >
+      <div
+        className={`h-4 w-4 rounded-full border transition-colors duration-500 ${
+          active ? "bg-color-1 border-color-1" : "bg-neutral-800 border-stroke-1"
+        }`}
+      />
+    </div>
+
+    <div className="flex items-center gap-4 mb-8">
+      <span className={`h3 transition-colors duration-500 ${active ? "text-color-1" : "text-white"}`}>{year}</span>
+      <div className={`flex-1 h-0.25 transition-colors duration-500 ${active ? "bg-color-1" : "bg-stroke-1"}`} />
+    </div>
+    </>
+  );
+};
+
 export function Experience() {
   const [activeItem, setActiveItem] = useState(null);
   const containerRef = useRef(null);
@@ -146,23 +192,20 @@ export function Experience() {
           <div className="relative" ref={listRef}>
             {years.map((year) => (
               <div key={year} className="relative pl-16 md:pl-20 mb-16 last:mb-0">
-                <div className="absolute left-3 top-0 h-10 w-10 rounded-full bg-neutral-900 flex items-center justify-center">
-                  <div className="h-4 w-4 rounded-full bg-neutral-800 border border-stroke-1" />
-                </div>
-
-                <div className="flex items-center gap-4 mb-8">
-                  <span className="h3 text-white">{year}</span>
-                  <div className="flex-1 h-0.25 bg-stroke-1" />
-                </div>
+                <YearMarker year={year} lineHeight={lineHeight} />
 
                 <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
                   {grouped[year].map((item) => (
                     <button
                       key={item.id}
                       onClick={() => setActiveItem(item)}
-                      className="group relative text-left p-0.25 rounded-[2rem] bg-gray-300 transition-colors hover:bg-gradient-to-b hover:from-color-1 hover:to-color-5"
+                      className="relative text-left p-0.25 border border-gray-800"
                     >
-                      <div className="relative flex h-full flex-col p-6 bg-neutral-900 rounded-[1.95rem] overflow-hidden transition-transform duration-300 group-hover:-translate-y-1">
+                      <PlusSvg className="absolute -top-[5.5px] -left-[5.5px] z-2 pointer-events-none" />
+                      <PlusSvg className="absolute -top-[5.5px] -right-[5.5px] z-2 pointer-events-none" />
+                      <PlusSvg className="absolute -bottom-[5.5px] -left-[5.5px] z-2 pointer-events-none" />
+                      <PlusSvg className="absolute -bottom-[5.5px] -right-[5.5px] z-2 pointer-events-none" />
+                      <div className="relative flex h-full flex-col p-6 bg-neutral-900 overflow-hidden">
                         <div className="absolute top-0 left-0 max-w-full opacity-20 pointer-events-none">
                           <img className="w-full" src={grid} width={550} height={550} alt="" />
                         </div>
@@ -213,7 +256,7 @@ export function Experience() {
                 animate={{ opacity: 1, scale: 1, y: 0 }}
                 exit={{ opacity: 0, scale: 0.92, y: 16 }}
                 transition={{ duration: 0.2 }}
-                className="relative w-full max-w-xl max-h-[85vh] overflow-y-auto bg-neutral-900 rounded-[2rem] border border-stroke-1"
+                className="relative w-full max-w-xl max-h-[85vh] overflow-y-auto [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden bg-neutral-900 rounded-[2rem] border border-stroke-1"
               >
                 <button
                   onClick={() => setActiveItem(null)}

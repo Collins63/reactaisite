@@ -50,6 +50,8 @@ import python from "./collaboration/python.png";
 import reactjs from "./collaboration/reactjs.png";
 import firebase from "./collaboration/firebase.png";
 import aws from "./collaboration/aws.png";
+import postgres from "./collaboration/postgres.png";
+import typescriptlogo from "./collaboration/typescript.png";
 
 import service1 from "./services/service-1.png";
 import service2 from "./services/service-2.png";
@@ -66,6 +68,8 @@ import roadmap2 from "./roadmap/image-2.png";
 import roadmap3 from "./roadmap/image-3.png";
 import roadmap4 from "./roadmap/image-4.png";
 import undone from "./roadmap/undone.svg";
+import devRelay from "./roadmap/devRelay.png";
+import devRelayWhite from "./roadmap/devRelayWhite.png";
 import landingPage from "./landingPage.PNG";
 import TallyTaphome from "./TallyTaphome.PNG" ;
 import touristaHome from "./touristaHome.jpg";
@@ -109,8 +113,12 @@ export {
   aws,
   nodejs,
   python,
+  devRelay,
+  devRelayWhite,
   reactjs,
   coding,
+  postgres,
+  typescriptlogo,
   tigerwebLogo,
   hirelane,
   tigerweb_logo,
