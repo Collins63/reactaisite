@@ -32,7 +32,7 @@ export function FloatingDockBottom() {
     {
       title: "About Me",
       icon: <IconQuestionMark className="h-full w-full text-neutral-200" />,
-      href: "#",
+      href: "/about",
     },
     {
       title: "LinkedIn",

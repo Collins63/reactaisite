@@ -1,5 +1,6 @@
 import { Routes, Route } from 'react-router-dom'
 import ComponentsPage from './pages/ComponentsPage'
+import AboutPage from './pages/AboutPage'
 import ButtonGradient from './assets/svg/ButtonGradient'
 import AuroraHero from './components/AuroraHero'
 import BackgroundBeamsDemo from './components/BackgroundBeams'
@@ -44,6 +45,7 @@ const App = () => (
   <Routes>
     <Route path='/' element={<Home />} />
     <Route path='/components' element={<ComponentsPage />} />
+    <Route path='/about' element={<AboutPage />} />
   </Routes>
 )
 
