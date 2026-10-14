@@ -28,7 +28,7 @@ export const FloatingDock = ({ items, desktopClassName, mobileClassName }) => {
       />
       <FloatingDockMobile
         items={items}
-        className={`relative block md:hidden ${mobileClassName || ""}`}
+        className={`relative mx-auto block w-full max-w-[min(92vw,26rem)] px-3 md:hidden ${mobileClassName || ""}`}
       />
     </>
   );
@@ -42,42 +42,44 @@ const FloatingDockMobile = ({ items, className }) => {
         {open && (
           <motion.div
             layoutId="nav"
-            className="absolute inset-x-0 bottom-full mb-2 flex flex-col gap-2"
+            initial={{ opacity: 0, y: 12, scale: 0.96 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={{ opacity: 0, y: 10, scale: 0.96 }}
+            transition={{ duration: 0.2, ease: "easeOut" }}
+            className="absolute inset-x-0 bottom-full mb-2"
           >
-            {items.map((item, idx) => (
-              <motion.div
-                key={item.title}
-                initial={{ opacity: 0, y: 10 }}
-                animate={{
-                  opacity: 1,
-                  y: 0,
-                }}
-                exit={{
-                  opacity: 0,
-                  y: 10,
-                  transition: {
-                    delay: idx * 0.05,
-                  },
-                }}
-                transition={{ delay: (items.length - 1 - idx) * 0.05 }}
-              >
-                <DockLink
-                  href={item.href}
-                  className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 backdrop-blur-md border border-white/20"
+            <div className="mx-auto flex w-full max-w-full items-center justify-center gap-1.5 rounded-full border border-white/20 bg-slate-950/70 px-2 py-2 shadow-lg shadow-black/20 backdrop-blur-xl">
+              {items.map((item, idx) => (
+                <motion.div
+                  key={item.title}
+                  initial={{ opacity: 0, y: 8 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: 8, transition: { delay: idx * 0.04 } }}
+                  transition={{ delay: (items.length - 1 - idx) * 0.04 }}
+                  className="shrink-0"
                 >
-                  <div className="h-4 w-4">{item.icon}</div>
-                </DockLink>
-              </motion.div>
-            ))}
+                  <DockLink
+                    href={item.href}
+                    aria-label={item.title}
+                    className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 border border-white/20 transition-transform duration-200 hover:scale-105"
+                  >
+                    <div className="h-4 w-4">{item.icon}</div>
+                  </DockLink>
+                </motion.div>
+              ))}
+            </div>
           </motion.div>
         )}
       </AnimatePresence>
-      <button
-        onClick={() => setOpen(!open)}
-        className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 backdrop-blur-md border border-white/20"
-      >
-        <IconLayoutNavbarCollapse className="h-5 w-5 text-neutral-200" />
-      </button>
+      <div className="flex justify-center">
+        <button
+          onClick={() => setOpen((prev) => !prev)}
+          aria-label="Toggle floating dock"
+          className="flex h-12 w-12 items-center justify-center rounded-full border border-white/20 bg-white/10 backdrop-blur-md shadow-lg shadow-black/20 transition-transform duration-200 hover:scale-105"
+        >
+          <IconLayoutNavbarCollapse className="h-5 w-5 text-neutral-200" />
+        </button>
+      </div>
     </div>
   );
 };

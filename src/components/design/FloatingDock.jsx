@@ -52,11 +52,8 @@ export function FloatingDockBottom() {
   ];
 
   return (
-    <div className="fixed left-1/2 -translate-x-1/2 bottom-10 rounded-4xl flex justify-center bg-white/10 backdrop-blur-md border border-white/20 shadow-lg shadow-black/20 z-50 py-2">
-      <FloatingDock
-        mobileClassName="translate-y-20" // only for demo, remove for production
-        items={links}
-      />
+    <div className="fixed left-1/2 -translate-x-1/2 bottom-4 md:bottom-10 w-[92vw] max-w-[26rem] md:w-auto md:max-w-none rounded-4xl flex justify-center bg-white/10 backdrop-blur-md border border-white/20 shadow-lg shadow-black/20 z-50 py-2">
+      <FloatingDock items={links} />
     </div>
   );
 }
