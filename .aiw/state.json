@@ -1,21 +1,34 @@
 {
   "schema": "aiw/1",
   "task": {
-    "id": "t-muzcamc0",
-    "goal": "change  pricing features ",
+    "id": "t-mv7w10z0",
+    "goal": "Make the floating mobile dock fit comfortably on small screens",
     "status": "done",
     "steps": [
       {
         "id": "s1",
-        "title": "start by changing the description they all point to ai chatbot",
+        "title": "Review the mobile dock layout and width constraints in the design component",
+        "status": "done"
+      },
+      {
+        "id": "s2",
+        "title": "Adjust the mobile dock sizing, overflow handling, and tap target sizes for phone screens",
+        "status": "done"
+      },
+      {
+        "id": "s3",
+        "title": "Build the app to confirm the responsive fix compiles cleanly",
         "status": "done"
       }
     ],
     "blockers": [],
-    "files": [],
-    "next_action": "Task complete",
-    "updated_by": "copilot",
-    "updated_at": "2026-10-08T09:36:58.470Z"
+    "files": [
+      "src/components/design/FloatingDockUI.jsx",
+      "src/components/design/FloatingDock.jsx"
+    ],
+    "next_action": "Verify on a real phone; commit when satisfied",
+    "updated_by": "claude-code",
+    "updated_at": "2026-10-14T09:11:47.952Z"
   },
   "backlog": []
 }

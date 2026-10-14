@@ -6,35 +6,57 @@ import Heading from "./Heading";
 import TagLine from "./Tagline";
 import { grid } from "../assets";
 import PlusSvg from "../assets/svg/PlusSvg";
+import awsAiCertificate from "../assets/certificates/aws-ai-certificate.png";
+import awsAiBadge from "../assets/certificates/aws-simulearn-ai-practitioner-training-badge.png";
+import ciscoDataAnalyticsCertificate from "../assets/certificates/cisco-data-analytics-essentials-certificate.png";
+import secureSoftwareBadge from "../assets/certificates/lfd121-developing-secure-software-badge.png";
+import secureSoftwareCertificate from "../assets/certificates/lfd121-developing-secure-software-certifcate.png";
 
-// TODO: replace the placeholder entries below with your real certificates and badges.
-// `image` is optional (import it from ../assets); `link` is the credential/verify URL.
 const certificates = [
   {
     id: "0",
-    title: "Your Certificate Title",
-    issuer: "Issuing Organisation",
+    title: "AWS AI Practitioner",
+    issuer: "AWS Skill Builder",
     date: "2025",
-    text: "One or two lines on what the certificate covers and the skills it proves.",
-    image: null,
+    text: "Covers foundational AI concepts, AWS AI services, and practical use cases for building responsible, business-ready intelligent solutions.",
+    image: awsAiCertificate,
     link: "",
   },
   {
     id: "1",
-    title: "Another Certificate Title",
-    issuer: "Issuing Organisation",
-    date: "2026",
-    text: "One or two lines on what the certificate covers and the skills it proves.",
-    image: null,
+    title: "Data Analytics Essentials",
+    issuer: "Cisco Networking Academy",
+    date: "2024",
+    text: "Develops core analytics skills, including working with data, extracting insights, and supporting better business decisions with evidence.",
+    image: ciscoDataAnalyticsCertificate,
+    link: "",
+  },
+  {
+    id: "2",
+    title: "Developing Secure Software",
+    issuer: "Linux Foundation",
+    date: "2024",
+    text: "Focuses on secure software engineering practices, threat awareness, and writing safer code throughout the development lifecycle.",
+    image: secureSoftwareCertificate,
     link: "",
   },
 ];
 
 const badges = [
-  { id: "0", title: "Your Badge Name", issuer: "Issuer", image: null, link: "" },
-  { id: "1", title: "Another Badge", issuer: "Issuer", image: null, link: "" },
-  { id: "2", title: "Third Badge", issuer: "Issuer", image: null, link: "" },
-  { id: "3", title: "Fourth Badge", issuer: "Issuer", image: null, link: "" },
+  {
+    id: "0",
+    title: "AWS AI Practitioner",
+    issuer: "AWS / SimuLearn",
+    image: awsAiBadge,
+    link: "",
+  },
+  {
+    id: "1",
+    title: "Developing Secure Software",
+    issuer: "Linux Foundation",
+    image: secureSoftwareBadge,
+    link: "",
+  },
 ];
 
 const Wrapper = ({ link, className, children }) =>
