@@ -16,6 +16,7 @@ import Header from './components/Header'
 import Hero from './components/Hero'
 import Pricing from './components/Pricing'
 import Roadmap from './components/Roadmap'
+import WebPlatforms from './components/WebPlatforms'
 import Services from './components/Services'
 import { AnimatedTestimonialsDemo } from './components/Testimonials'
 
@@ -33,6 +34,7 @@ const Home = () => {
       <Certificates />
       <Pricing />
       <Roadmap />
+      <WebPlatforms />
       {/* <AnimatedTestimonialsDemo /> */}
       <Footer />  
       </div>

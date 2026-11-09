@@ -76,6 +76,7 @@ import touristaHome from "./touristaHome.jpg";
 import tigerwebHome from "./tigerwebHome.PNG";
 import fdms from "./fdmsGateway.PNG";
 import hirelane from "./hirelane.png";
+import xeres from "./xeres.png";
 
 import notification1 from "./notification/image-1.png";
 import notification2 from "./notification/image-2.png";
@@ -121,6 +122,7 @@ export {
   typescriptlogo,
   tigerwebLogo,
   hirelane,
+  xeres,
   tigerweb_logo,
   landingPage,
   tigerwebHome,

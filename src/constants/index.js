@@ -18,6 +18,7 @@ import {
   flutter,
   framer,
   hirelane,
+  xeres,
   homeSmile,
   instagram,
   mongodb,
@@ -99,6 +100,19 @@ export const brainwaveServicesIcons = [
   sliders04,
 ];
 
+export const webPlatforms = [
+  {
+    id: "0",
+    title: "Xeres Technologies",
+    text: "A corporate website for Xeres Technologies, presenting the company, its services and its work in a clean, responsive layout that is easy to browse on any device.",
+    date: "2026",
+    status: "done",
+    imageUrl: xeres,
+    siteUrl: "https://xeres.co.zw",
+    languages: [reactjs],
+  },
+];
+
 export const roadmap = [
   {
     id: "0",
@@ -147,6 +161,8 @@ export const roadmap = [
     date: "December 2026",
     status: "progress",
     imageUrl: devRelayWhite,
+    actionLabel: "Get Extension",
+    actionUrl: "vscode:extension/CollinsChimbganda24.aiw-extension",
     languages:[
       typescriptlogo,
       postgres

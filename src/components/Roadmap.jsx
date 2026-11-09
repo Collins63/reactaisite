@@ -74,6 +74,11 @@ const Roadmap = () => {
                       </div>
                     ))}
                   </div>
+                  {item.actionUrl && (
+                    <div className="mt-6">
+                      <Button href={item.actionUrl}>{item.actionLabel}</Button>
+                    </div>
+                  )}
                 </div>
               </div>
             </div>
