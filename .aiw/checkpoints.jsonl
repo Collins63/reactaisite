@@ -35,3 +35,4 @@
 {"at":"2026-10-14T09:12:14.139Z","agent":"auto","kind":"auto","summary":"Commit 051d36f: Fix floating dock on mobile: remove off-screen offset, constrain width, compact tap targets","sha":"051d36f","branch":"main"}
 {"at":"2026-10-14T09:13:24.897Z","agent":"auto","kind":"auto","summary":"Commit 3b2a00e: floating dock update","sha":"3b2a00e","branch":"main"}
 {"at":"2026-10-14T09:24:45.236Z","agent":"auto","kind":"auto","summary":"Edit burst - 1 file changed, 1 insertion(+) - open: src/components/Experience.jsx, src/components/design/FloatingDockUI.jsx","sha":"3b2a00e","branch":"main"}
+{"at":"2026-11-09T17:43:03.645Z","agent":"auto","kind":"auto","summary":"Commit 073d25e: platforms update","sha":"073d25e","branch":"main"}
