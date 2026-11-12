@@ -36,3 +36,5 @@
 {"at":"2026-10-14T09:13:24.897Z","agent":"auto","kind":"auto","summary":"Commit 3b2a00e: floating dock update","sha":"3b2a00e","branch":"main"}
 {"at":"2026-10-14T09:24:45.236Z","agent":"auto","kind":"auto","summary":"Edit burst - 1 file changed, 1 insertion(+) - open: src/components/Experience.jsx, src/components/design/FloatingDockUI.jsx","sha":"3b2a00e","branch":"main"}
 {"at":"2026-11-09T17:43:03.645Z","agent":"auto","kind":"auto","summary":"Commit 073d25e: platforms update","sha":"073d25e","branch":"main"}
+{"at":"2026-11-09T17:43:40.038Z","agent":"auto","kind":"auto","summary":"Commit acb5486: changes","sha":"acb5486","branch":"main"}
+{"at":"2026-11-09T17:44:37.862Z","agent":"auto","kind":"auto","summary":"Window closed - 1 file changed, 1 insertion(+) - open: src/components/Experience.jsx, src/components/WebPlatforms.jsx, src/constants/index.js, src/components/Roadmap.jsx","sha":"acb5486","branch":"main"}
